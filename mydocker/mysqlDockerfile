@@ -1,9 +1,13 @@
-FROM mysql:5.7
-MAINTAINER "Srinivas Dande"
+# Use official MySQL 8.0.16 image from Docker Hub
+FROM mysql:8.0.16
 
-ENV MYSQL_ROOT_PASSWORD myroot123
-ENV MYSQL_USER srinivas
-ENV MYSQL_PASSWORD srinivas
-ENV MYSQL_DATABASE myjlcbs
+LABEL maintainer="Akash Verma"
 
+# Set environment variables for MySQL configuration
+ENV MYSQL_ROOT_PASSWORD=myroot123 \
+    MYSQL_USER=akash \
+    MYSQL_PASSWORD=Akash87970@# \
+    MYSQL_DATABASE=bookstoredb
+
+# Expose the default MySQL port
 EXPOSE 3306
